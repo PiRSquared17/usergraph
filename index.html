@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="//tools-static.wmflabs.org/static/d3/3.4.8/d3.min.js"></script>
+<link rel="stylesheet" href="//tools-static.wmflabs.org/static/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<script src="//tools-static.wmflabs.org/static/jquery/1.11.0/jquery.min.js"></script>
+<script src="//tools-static.wmflabs.org/static/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="graph.js"></script>
+<title>UserGraph</title>
+<body>
+<div class="container before-tabs">
+<div class="jumbotron text-center">
+<h1>UserGraph<sub><a href="//meta.wikimedia.org/wiki/Talk:UserGraph" target="_blank" data-msg="feedback"></a></sub></h1><br>
+<noscript>
+<div class="alert alert-danger">
+You need JavaScript to be enabled to use UserGraph.
+</div>
+</noscript>
+<form id="form">
+	<div class="form-group">
+		<label for="u" data-msg="yourname">User name (or blank to see top thankers):</label>
+		<input type="text" class="form-control" id="u" name="u" size="25" autocomplete="off" placeholder="LilaTretikov">
+	</div>
+	<div class="form-group">
+		<label for="p">Project:</label>
+		<input type="text" class="form-control" required id="p" name="p" size="25" autocomplete="off" placeholder="metawiki" value="metawiki">
+	</div>
+	<div class="form-group">
+		<label for="l">Maximum number of users:</label>
+		<input type="text" class="form-control" required id="l" name="l" size="3" autocomplete="off" placeholder="200" value="200">
+	</div>
+	<div class="form-group">
+		<label for="l">Append mode (do not reset graph after each query)</label>
+		<input type="checkbox" class="form-control" id="a" name="a">
+	</div>
+	<p>You are going to run a somewhat heavy operation. Do you <b>really</b> want to continue?</p>
+	<button type="submit" role="button" class="btn btn-lg btn-primary" id="init">
+		<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		Yes
+	</button>
+</form>
+</div>
+</div>
+<footer>
+<span id="credits">Charts powered by <a href="http://d3js.org">D3.js</a>, based on Ricordisamoa's DEWKIN (GPL). Thanks to Aldnon for testing. </span>All dates are UTC.
+</footer>
+<a href="//github.com/PiRSquared17/usergraph"><img style="position: fixed; top: 0; right: 0; border: 0;" 
+src="//tools.wmflabs.org/static/res/logos/forkme_right_darkblue.png" alt="Fork me on GitHub"></a>
+</body>
+</html>
