@@ -4,7 +4,7 @@ function drawGraph(wiki, limit, append, user) { // get the data
     var limit_q = typeof limit == "undefined" ? "&limit=300" : ("&limit=" + encodeURIComponent(limit));
     d3.json("api.php?wiki=" + encodeURIComponent(wiki) + user_q + limit_q, function(error, elinks) {
 
-            //var nodes = {};
+            nodes = append ? nodes : {};
 
             // Compute the distinct nodes from the links.
             elinks.forEach(function(link) {
