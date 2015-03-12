@@ -116,6 +116,6 @@ $(function() {
 svg = d3.select("body").append("svg");
     $('#form').on('submit', function(event) {
         event.preventDefault();
-        drawGraph($('#p').val(), $('#l').val(), $('#a').val(), $('#u').val());
+        drawGraph($('#p').val(), $('#l').val(), $('#a').is(':checked'), $('#u').val());
     });
 });
