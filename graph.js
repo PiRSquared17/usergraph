@@ -18,7 +18,7 @@ function drawGraph(wiki, limit, append, user) { // get the data
                     });
                 link.value = +link.value;
             });
-            links = a ? elinks.concat(links) : elinks;
+            links = append ? elinks.concat(links) : elinks;
 
             var margin = {
                     top: -5,
@@ -47,7 +47,7 @@ function drawGraph(wiki, limit, append, user) { // get the data
                 svg.selectAll("*").remove();
                 svg = svg.attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom);
-                svg=svg.append("g");
+                svg.append("g");
             var container = svg;
             // build the arrow.
             container.append("svg:defs").selectAll("marker")
