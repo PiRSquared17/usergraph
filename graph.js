@@ -26,8 +26,8 @@ function drawGraph(wiki, limit, append, user) { // get the data
                     bottom: -5,
                     left: -5
                 },
-                width = 2.5 * 960 - margin.left - margin.right,
-                height = 2.5 * 500 - margin.top - margin.bottom;
+                width = 1.8 * 960 - margin.left - margin.right,
+                height = 3 * 500 - margin.top - margin.bottom;
 
             var force = d3.layout.force()
                 .nodes(d3.values(nodes))
